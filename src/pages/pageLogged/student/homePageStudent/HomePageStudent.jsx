@@ -9,7 +9,6 @@ const HomePageStudent = () => {
     const navigate = useNavigate();
 
     function topics(){
-        
         fetch(Variaveis.urlBase + ":8080/topics").then(response => response.json()).then(
         date => {
             console.log(date);
@@ -18,7 +17,6 @@ const HomePageStudent = () => {
     }
 
     function questionForTopics(id, name){
-        console.log(`/questions/${id}/${name}`);
         navigate(`/questions/${id}/${name}`);
     }
 
@@ -37,7 +35,9 @@ const HomePageStudent = () => {
                             <p className='nameDiscipline'>{item.topics_name}</p>
                             <p className='descriptionDiscipline'>{item.topics_description}</p>
                         </div>
-                        <p className='teacherName'>{item.topics_user_name}</p>
+                        <div className='teacherName'>
+                            <p >{item.topics_user_name}</p>
+                        </div>
                     </div> 
                 )}
             </div>  

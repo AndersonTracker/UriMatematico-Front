@@ -1,11 +1,17 @@
 import React, { useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
+import Variaveis from '../global/Variaveis';
 
 const Header = (props) => {
     const navigate = useNavigate();
+    const match = Variaveis.email.match(/@(.+)/);
 
     function topcs(){
-        return navigate("/aluno");
+        if(match[0] === "@uricer.edu.br"){
+            return navigate("/professor");
+        }else{
+            return navigate("/aluno");
+        }
     }
 
     function helpMe(){
