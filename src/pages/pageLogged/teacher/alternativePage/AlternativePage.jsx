@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../../../componentes/header/Header';
 import Variaveis from '../../../../componentes/global/Variaveis';
 import { useNavigate, useParams } from 'react-router-dom';
-import Footer from '../../../../componentes/footer/Footer';
 
 const AlternativePage = () => {
   const [title, setTitle] = useState('');
@@ -130,7 +129,6 @@ const AlternativePage = () => {
             
           </div>
       </div>
-      <Footer />
     </>
   );
 };

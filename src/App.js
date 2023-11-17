@@ -35,6 +35,7 @@ export default class App extends Component {
           <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" crossOrigin="true"></script>
           <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js" crossOrigin="true"></script>
           <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js" crossOrigin="true"></script>
+    
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/aluno" element={<HomePageStudent />} />

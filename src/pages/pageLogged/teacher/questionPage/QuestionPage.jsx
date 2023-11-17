@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../../../componentes/header/Header';
 import Variaveis from '../../../../componentes/global/Variaveis';
 import { useNavigate, useParams } from 'react-router-dom';
-import Footer from '../../../../componentes/footer/Footer';
 import { GrEdit } from "react-icons/gr";
 import { MdDeleteOutline } from "react-icons/md";
 import { VideoModal } from '../../../../componentes/modais/VideoModal';
@@ -144,7 +143,6 @@ const QuestionPage = () => {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 };

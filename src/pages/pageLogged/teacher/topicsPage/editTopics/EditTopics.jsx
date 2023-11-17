@@ -135,7 +135,7 @@ const EditTopics = () => {
                         <button className='buttonCancelTopics' onClick={() => {cancelarTopics()}}>Cancelar</button>
                     </div>
                     <div class="createTopic">
-                        <button className='buttonCreateTopics'>New Topics</button>
+                        <button className='buttonCreateTopics'>Edit</button>
                     </div>
                 </form>
             </div>  

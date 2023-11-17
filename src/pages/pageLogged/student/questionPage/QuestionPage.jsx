@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../../../componentes/header/Header';
 import Variaveis from '../../../../componentes/global/Variaveis';
 import { useNavigate, useParams } from 'react-router-dom';
-import Footer from '../../../../componentes/footer/Footer';
 import { VideoModal } from '../../../../componentes/modais/VideoModal';
 
 const QuestionPage = () => {
@@ -17,6 +16,7 @@ const QuestionPage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [textDescription, setTextDescription] = useState('');
   const [urlVideo, setUrlVideo] = useState('');
+  var Latex = require('react-latex');
 
   function questionsFromTopics() {
     fetch(Variaveis.urlBase + ":8080/questions/topics/" + id)
@@ -87,7 +87,7 @@ const QuestionPage = () => {
               </div>
             </div>
             <div className='textEscondido' id={item.questions_id} style={{ display: openDivId === item.questions_id ? 'block' : 'none' }}>
-              <p>{item.questions_text}</p>
+              <Latex>{item.questions_text}</Latex><br/><br/>
               <img className='imgQuestion' src={item.questions_image_url} alt='Imagem da pergunta' />
               <div>
                 {alternatives.map((alternative) => (
@@ -99,7 +99,7 @@ const QuestionPage = () => {
                       backgroundColor: selectedAlternative === alternative.alternatives_description ? ( isCorrect ? 'green' : 'red') : '#afb0b3',
                       cursor: 'pointer',
                     }} 
-                    className='textAlternatives'>{alternative.alternatives_description}</p>
+                    className='textAlternatives'><Latex>{alternative.alternatives_description}</Latex></p>
                   </div>
                 ))}
               </div>
@@ -107,7 +107,6 @@ const QuestionPage = () => {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 };

@@ -4,7 +4,7 @@ import Variaveis from '../../../../../componentes/global/Variaveis';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const NewQuestion = () => {
-    const [title] = useState("Criar novo tópico");
+    const [title] = useState("Criar nova questão");
     const [values, setValues] = useState(initialState);
     const [valueDataError, setValueDataError] = useState(initialStateError);
     const navigate = useNavigate();
